@@ -1,0 +1,8 @@
+click
+flask
+itsdangerous
+flask_bootstrap
+jinja2
+markupSafe
+werkzeug
+psycopg2

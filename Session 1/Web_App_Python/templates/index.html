@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    <tr>
+        <th>时间</th>
+        <th>设备ID</th>
+        <th>电压（伏特）</th>
+        <th>电流（安培）</th>
+        <th>功率（千瓦）</th>
+    </tr>
+        {% for i in u %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+                <td>{{ i[4] }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
