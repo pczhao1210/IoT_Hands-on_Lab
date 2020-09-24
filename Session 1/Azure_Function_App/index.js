@@ -1,16 +1,4 @@
 module.exports = async function (context, eventHubMessages) {
-
-    const { Client } = require('pg');
-
-    const client = new Client({
-        user: "postgres",
-        database: "iotdata",
-        password: "postgres",
-        port: 5432,
-        host: "139.217.82.19",
-    });
-    
-    client.connect();
     
     context.log(`JavaScript eventhub trigger function called for message array ${JSON.stringify(eventHubMessages)}`);
     
@@ -29,15 +17,8 @@ module.exports = async function (context, eventHubMessages) {
         
         //context.log(queryString)
            
-        client.query(queryString, (err, res) => {
-            if (err) {
-                context.error(err);
-                context.log('Failed to Write to SQL');
-                return;
-            } else {
-                context.log('Data insert successful');
-                client.end();}
-        });
+    var service = require('./optpg');
+    await service.opt_pg(context, queryString);
           
     });
 };
