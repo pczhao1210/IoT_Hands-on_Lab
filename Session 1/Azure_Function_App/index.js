@@ -31,7 +31,6 @@ module.exports = async function (context, eventHubMessages) {
            
         client.query(queryString, (err, res) => {
             if (err) {
-                context.error(err);
                 context.log('Failed to Write to SQL');
                 return;
             } else {
