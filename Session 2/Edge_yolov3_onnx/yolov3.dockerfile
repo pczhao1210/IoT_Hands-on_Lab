@@ -25,7 +25,7 @@ RUN apt-get update -y && \
 # Download the model
 RUN mkdir /app && \
     cd /app && \
-    wget https://github.com/onnx/models/raw/master/vision/object_detection_segmentation/yolov3/model/yolov3-10.tar.gz && \
+    wget https://trainingtool.blob.core.chinacloudapi.cn/software/yolov3-10.tar.gz && \
     tar -xzf yolov3-10.tar.gz && \
     rm -rf yolov3-10.tar.gz && \
     rm -rf test_data_set_0/* && \

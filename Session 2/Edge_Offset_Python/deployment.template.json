@@ -9,7 +9,13 @@
           "settings": {
             "minDockerVersion": "v1.25",
             "loggingOptions": "",
-            "registryCredentials": {}
+            "registryCredentials": {
+              "iotcontainer": {
+                "username": "$CONTAINER_REGISTRY_USERNAME_iotcontainer",
+                "password": "$CONTAINER_REGISTRY_PASSWORD_iotcontainer",
+                "address": "iotcontainer.azurecr.cn"
+              }
+            }
           }
         },
         "systemModules": {
@@ -51,17 +57,17 @@
           }
         },
         "modules": {
-          "Edge_Offset": {
+          "edgeoffset": {
             "version": "1.0",
             "type": "docker",
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.Edge_Offset}",
+              "image": "${MODULES.edgeoffset}",
               "createOptions": {}
             }
           },
-          "SimulatedTemperatureSensor": {
+          "tempsensor": {
             "version": "1.0",
             "type": "docker",
             "status": "running",
@@ -78,26 +84,26 @@
       "properties.desired": {
         "schemaVersion": "1.0",
         "routes": {
-          "Edge_OffsetToIoTHub": "FROM /messages/modules/Edge_Offset/outputs/* INTO $upstream",
-          "sensorToEdge_Offset": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/Edge_Offset/inputs/input1\")"
+          "edgeoffsetToIoTHub": "FROM /messages/modules/edgeoffset/outputs/* INTO $upstream",
+          "sensorToedgeoffset": "FROM /messages/modules/tempsensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/edgeoffset/inputs/input1\")"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
         }
       }
     },
-    "Edge_Offset": {
+    "edgeoffset": {
       "properties.desired":{
           "TemperatureThreshold":25,
           "EncodedOffset": 0,
           "EncodedSwitch": true
         }
     },
-    "SimulatedTemperatureSensor": {
+    "tempsensor": {
       "properties.desired": {
-           "SendData": true,
-           "SendInterval": 10
+            "SendData": true,
+            "SendInterval": 10
         }
-    }    
+    }
   }
 }
