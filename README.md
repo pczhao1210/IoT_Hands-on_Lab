@@ -1,4 +1,4 @@
-# IoT_Hands-on_Lab
+# Azure IoT Hands on Lab (Azure IoT HoL)
 
 This is an Azure IoT Hands on Lab (Azure IoT HoL) for Azure IoT Hub and Azure IoT Edge.
 
