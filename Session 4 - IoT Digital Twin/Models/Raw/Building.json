@@ -1,0 +1,35 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:Building;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:Building:Address;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Address"
+        },
+        "name": "Address",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:dtdlv2:Building:Level;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Level"
+        },
+        "name": "Level",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Building"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }
+]

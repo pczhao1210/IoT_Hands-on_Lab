@@ -1,0 +1,54 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:MeetingRoom;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:RoomNumber;1",
+        "@type": "Property",
+        "displayName": "Room Number",
+        "name": "RoomNumber",
+        "schema": "string",
+        "writable": true
+      },
+	  {
+        "@id": "dtmi:dtdlv2:MeetingRoom:IsOccupied;1",
+        "@type": "Property",
+        "displayName": "Is Occupied",
+        "name": "IsOccupied",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:Temperature;1",
+        "@type": [
+          "Property",
+          "Temperature"
+        ],
+        "displayName": "Temperature",
+        "name": "Temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:Humidity;1",
+        "@type": [
+          "Property",
+          "RelativeHumidity"
+        ],
+        "displayName": "Humidity",
+        "name": "Humidity",
+        "schema": "double",
+        "unit": "percent"
+      },
+	  {
+        "@type": "Relationship",
+        "@id": "dtmi:dtdlv2:Building:room_has_sensors;1",
+        "name": "room_has_sensors",
+        "displayName": "Has Sensors"
+      }
+    ],
+    "displayName": "Meeting Room",
+    "@context": "dtmi:dtdl:context;2"
+  }
+]

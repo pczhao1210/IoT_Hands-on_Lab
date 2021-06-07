@@ -1,0 +1,17 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:HumanSensor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:HumanSensor:IsOccupied;1",
+        "@type": "Property",
+        "displayName": "IsOccupied",
+        "name": "IsOccupied",
+        "schema": "integer"
+      }
+    ],
+    "displayName": "HumanSensor",
+    "@context": "dtmi:dtdl:context;2"
+  }
+]

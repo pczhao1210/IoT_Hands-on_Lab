@@ -1,0 +1,41 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:Floor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:Floor:Level;1",
+        "@type": "Property",
+        "displayName": "Level",
+        "name": "Level",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:dtdlv2:Floor:TotalMeetingRoomCount;1",
+        "@type": "Property",
+        "displayName": "Total Meeting Room Count",
+        "name": "TotalMeetingRoomCount",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:dtdlv2:Floor:FreeMeetingRoomCount;1",
+        "@type": "Property",
+        "displayName": "Free Meeting Room Count",
+        "name": "FreeMeetingRoomCount",
+        "schema": "integer",
+        "writable": true
+      },
+	  {
+        "@type": "Relationship",
+        "@id": "dtmi:dtdlv2:Building:floor_has_rooms;1",
+        "name": "floor_has_rooms",
+        "displayName": "Has Floors",
+        "target": "dtmi:dtdlv2:MeetingRoom;1"
+      }
+    ],
+    "displayName": "Floor",
+    "@context": "dtmi:dtdl:context;2"
+  }
+]

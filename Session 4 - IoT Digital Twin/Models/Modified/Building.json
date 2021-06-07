@@ -1,0 +1,33 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:Building;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:Building:Address;1",
+        "@type": "Property",
+        "displayName": "Address",
+        "name": "Address",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:dtdlv2:Building:Level;1",
+        "@type": "Property",
+        "displayName": "Level",
+        "name": "Level",
+        "schema": "integer",
+        "writable": true
+      },
+	  {
+        "@type": "Relationship",
+        "@id": "dtmi:dtdlv2:Building:building_has_floors;1",
+        "name": "building_has_floors",
+        "displayName": "Has Floors",
+        "target": "dtmi:dtdlv2:Floor;1"
+      }
+    ],
+    "displayName": "Building",
+    "@context": "dtmi:dtdl:context;2"
+  }
+]

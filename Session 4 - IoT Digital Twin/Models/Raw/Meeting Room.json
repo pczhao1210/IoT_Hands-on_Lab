@@ -1,0 +1,61 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:MeetingRoom;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:RoomNumber;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Room Number"
+        },
+        "name": "RoomNumber",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:IsOccupied;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Is Occupied"
+        },
+        "name": "IsOccupied",
+        "schema": "boolean",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:Temperature;1",
+        "@type": [
+          "Property",
+          "Temperature"
+        ],
+        "displayName": {
+          "en": "Temperature"
+        },
+        "name": "Temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@id": "dtmi:dtdlv2:MeetingRoom:Humidity;1",
+        "@type": [
+          "Property",
+          "RelativeHumidity"
+        ],
+        "displayName": {
+          "en": "Humidity"
+        },
+        "name": "Humidity",
+        "schema": "double",
+        "unit": "percent"
+      }
+    ],
+    "displayName": {
+      "en": "Meeting Room"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }
+]

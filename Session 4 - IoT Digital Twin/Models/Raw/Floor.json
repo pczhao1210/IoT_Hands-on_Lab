@@ -1,0 +1,45 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:Floor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:Floor:Level;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Level"
+        },
+        "name": "Level",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:dtdlv2:Floor:TotalMeetingRoomCount;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Total Meeting Room Count"
+        },
+        "name": "TotalMeetingRoomCount",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:dtdlv2:Floor:FreeMeetingRoomCount;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Free Meeting Room Count"
+        },
+        "name": "FreeMeetingRoomCount",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "Floor"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }
+]

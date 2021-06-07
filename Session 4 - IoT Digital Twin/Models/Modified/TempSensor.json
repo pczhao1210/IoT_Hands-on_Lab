@@ -1,0 +1,32 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:TempSensor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:TempSensor:Temperature;1",
+        "@type": [
+          "Property",
+          "Temperature"
+        ],
+        "displayName": "Temperature",
+        "name": "Temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@id": "dtmi:dtdlv2:TempSensor:Humidity;1",
+        "@type": [
+          "Property",
+          "RelativeHumidity"
+        ],
+        "displayName": "Humidity",
+        "name": "Humidity",
+        "schema": "double",
+        "unit": "percent"
+      }
+    ],
+    "displayName": "TempSensor",
+    "@context": "dtmi:dtdl:context;2"
+  }
+]

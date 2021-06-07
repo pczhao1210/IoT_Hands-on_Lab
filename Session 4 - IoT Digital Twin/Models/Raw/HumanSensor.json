@@ -1,0 +1,25 @@
+[
+  {
+    "@id": "dtmi:dtdlv2:HumanSensor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:dtdlv2:HumanSensor:IsOccupied;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "IsOccupied"
+        },
+        "name": "IsOccupied",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "HumanSensor"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }
+]
